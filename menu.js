@@ -43,3 +43,53 @@ module.exports = function() {
         { label: "Select All", accelerator: "CmdOrCtrl+A", role: "selectall" }
       ]
     },
+    {
+      label: "View",
+      submenu: [
+        {
+          label: "Reload",
+          accelerator: "CmdOrCtrl+R",
+          click: function(item, win) {
+            if (win) win.reload();
+          }
+        },
+        {
+          label: "Toggle Full Screen",
+          accelerator: "Ctrl+Command+F",
+          click: function(item, win) {
+            if (win) win.setFullScreen(!win.isFullScreen());
+          }
+        },
+        {
+          label: "Toggle Developer Tools",
+          accelerator: "Alt+Command+I",
+          click: function(item, win) {
+            if (win) win.toggleDevTools();
+          }
+        }
+      ]
+    },
+    {
+      label: "Window",
+      role: "window",
+      submenu: [
+        { label: "Minimize", accelerator: "CmdOrCtrl+M", role: "minimize" },
+        { label: "Close", accelerator: "CmdOrCtrl+W", role: "close" }
+      ]
+    },
+    {
+      label: "Help",
+      role: "help",
+      submenu: [
+        {
+          label: "View on GitHub",
+          click: function() {
+            shell.openExternal("http://github.com/inenarratus/GmailUI");
+          }
+        }
+      ]
+    }
+  ];
+
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+};
