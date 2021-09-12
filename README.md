@@ -1,4 +1,4 @@
-### GmailUI
+# GmailUI
 
 This is a thin wrapper around the Gmail web interface built with
 [Electron](https://electronjs.org).
