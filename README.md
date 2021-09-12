@@ -1,4 +1,4 @@
-# Gmail packaged as Electron app
+### GmailUI
 
 This is a thin wrapper around the Gmail web interface built with
 [Electron](https://electronjs.org).
